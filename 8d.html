@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+< <!DOCTYPE html>
+<html>
+<head>
+  <title>Print Object Data</title>
+</head>
+<body>
+  <h2>Print Data from Object</h2>
+
+  <script>
+    // Simple object
+    var student = {
+      name: "Aditya",
+      branch: "IT",
+      year: 2
+    };
+
+    // 1. Using for-in loop
+    document.write("<b>Using for-in loop:</b><br>");
+    for (var key in student) {
+      document.write(student[key] + "<br>");
+    }
+    document.write("<br>");
+
+    // 2. Using forEach loop
+    document.write("<b>Using forEach loop:</b><br>");
+    Object.values(student).forEach(function(value) {
+      document.write(value + "<br>");
+    });
+    document.write("<br>");
+
+    // 3. Using for-of loop
+    document.write("<b>Using for-of loop:</b><br>");
+    for (var value of Object.values(student)) {
+      document.write(value + "<br>");
+    }
+  </script>
+</body>
+</html>

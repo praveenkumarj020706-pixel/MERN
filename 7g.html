@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date Object Example</title>
+</head>
+<body>
+<h2>Using Date Object Properties and Methods (With Day of Week)</h2>
+<script>
+var today = new Date();
+
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+var dayOfWeek= days [today.getDay()];
+
+document.write("<b>Day:</b> " + dayOfWeek + "<br>");
+document.write("<b>Year:</b>" + today.getFullYear() + "<br>");
+document.write("<b>Month:</b>" + (today.getMonth() + 1) + "<br>");
+document.write("<b>Date:</b> "+today.getDate() + "<br>");
+</script>
+</body>
+</html>

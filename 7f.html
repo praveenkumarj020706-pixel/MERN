@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RegExp Object Example</title>
+</head>
+<body>
+<h2>Using RegExp Object Methods (Simple Version)</h2>
+
+<script>
+// Create a string
+var text = "jayavarapu praveen.";
+
+// Create a RegExp pattern to search for "Aditya"
+var pattern = /praveen/;
+
+// RegExp Method: test()
+// Checks if the pattern exists in the string and returns true or false.
+document.write("<b>Does the text contain 'praveen'?</b>" + pattern.test(text) + "<br>");
+
+// RegExp Method: match() using string
+// Searches for a match and returns an array of results or null if no match is found.
+var result = text.match(pattern);
+document.write("<b>Match result:</b>" + result + "<br>");
+</script>
+
+</body>
+</html>
