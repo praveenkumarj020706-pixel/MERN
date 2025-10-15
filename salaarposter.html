@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cinema Poster - Salaar Movie</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto&display=swap" rel="stylesheet" />
+    <style>
+        /* Reset */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            color: #ececec;
+            background-image: url("file:///C:/Users/prave/Downloads/salaarr.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0a122a; /* fallback */
+        }
+
+        /* Overlay for better readability */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 18, 42, 0.7); /* Dark navy blue with opacity */
+            backdrop-filter: blur(7px);
+            z-index: 0;
+        }
+
+        .poster-container {
+            position: relative;
+            z-index: 1;
+            width: 520px;
+            margin: 20px;
+            background: rgba(15, 22, 50, 0.9); /* Darker navy container background */
+            border-radius: 25px;
+            padding: 40px 36px 48px 36px;
+            box-shadow:
+                0 10px 30px rgba(255, 140, 0, 0.6), /* orange glow */
+                0 0 25px rgba(255, 165, 0, 0.45);
+            text-align: center;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .poster-img {
+            width: 100%;
+            max-height: 720px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.75)); /* orange glow */
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: zoom-in;
+            box-shadow:
+                0 5px 20px #ffa500cc;
+        }
+        .poster-img:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 35px rgba(255, 140, 0, 1));
+            cursor: pointer;
+        }
+
+        .movie-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 3.4rem;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #ff8c00; /* bright orange */
+            text-shadow: 1px 1px 12px rgba(255, 140, 0, 0.85);
+        }
+
+        .movie-details {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 1.3rem;
+            color: #dcdcdc;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .book-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff7f00, #ff5100);
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 48px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.25rem;
+            box-shadow: 0 8px 25px rgba(255, 127, 0, 0.8);
+            transition: all 0.3s ease;
+            letter-spacing: 1.2px;
+            user-select: none;
+        }
+
+        .book-link:hover,
+        .book-link:focus {
+            background: linear-gradient(135deg, #ff5100, #ff7f00);
+            box-shadow: 0 14px 40px rgba(255, 81, 0, 1);
+            transform: translateY(-4px);
+            outline: none;
+        }
+
+        /* Fade-in up animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .poster-container {
+                width: 90vw;
+                padding: 24px 20px 32px 20px;
+            }
+
+            .movie-title {
+                font-size: 2.4rem;
+                letter-spacing: 1.5px;
+            }
+
+            .movie-details {
+                font-size: 1rem;
+            }
+
+            .book-link {
+                padding: 14px 36px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster-container" role="main" aria-label="Salaar Movie Cinema Poster">
+        <img class="poster-img" src="file:///C:/Users/prave/Downloads/salaar%20html.jpg" alt="Salaar Movie Poster" />
+        <h1 class="movie-title">Salaar</h1>
+        <div class="movie-details">
+            <p><strong>Release Date:</strong> March 22, 2024</p>
+            <p><strong>Genre:</strong> Action, Thriller</p>
+            <p><strong>Duration:</strong> 2h 30m (approx.)</p>
+            <p><strong>Starring:</strong> Prabhas, Shruti Haasan, Jagapathi Babu</p>
+        </div>
+        <a class="book-link" href="https://in.bookmyshow.com/movies/salaar/ET00367294" target="_blank" rel="noopener noreferrer" aria-label="Book tickets for Salaar movie">
+            Book Tickets
+        </a>
+    </div>
+</body>
+</html>
